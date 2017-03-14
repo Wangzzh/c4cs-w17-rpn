@@ -5,7 +5,10 @@ OPERATORS = {
 	'-': operator.sub,
 	'*': operator.mul,
 	'/': operator.truediv,
+	'^': operator.pow,
 }
+
+
 def calculate(arg):
 	stack = list()
 	for operand in arg.split():
@@ -20,6 +23,8 @@ def calculate(arg):
 			
 			stack.append(result)
 	return stack.pop()
+
+
 def main():
 	while True:
 		result = calculate(input('rpn calc> '))
