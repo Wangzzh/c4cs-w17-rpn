@@ -16,3 +16,6 @@ class TestBasics(unittest.TestCase):
 		result = rpn.calculate("2 3 ^")
 		self.assertEqual(8, result)
 
+	def test_carat2(self):
+		result = rpn.calculate("3 2 1 ^ ^")
+		self.assertEqaul(9, result)
